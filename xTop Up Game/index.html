@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARSTORE</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    .navbar {
+        background-color: #424769;
+    }
+    .navbar-brand {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 300%;
+        margin-left: 2%;
+        }
+
+    .navbar-nav .nav-link {
+        color: aliceblue;
+        font-family: 'Raleway', sans-serif;
+        font-weight: lighter;
+        font-size: 125%;
+        }
+
+    .navbar-nav .nav-link.active {
+        border-bottom: none;
+        }
+
+    .carousel {
+        max-width: 1000px; 
+        margin: 0 auto; 
+        }
+
+    .carousel-inner {
+        max-width: 100%; 
+        border-radius: 1%;
+        }
+
+    .carousel-item img{
+        margin-top: 0%;
+        height: 400px;
+        width: 300%;
+        object-fit: cover; 
+    }
+    .container {
+        background-color: rgb(255, 255, 255);
+        padding: 80px;
+        border-radius: 1%;
+    }
+
+    .game-card {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 50px;
+        padding: 18%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 1%;
+    }
+
+    .card-img-top {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 1%;
+    }
+
+    .card-title {
+        font-size: 170%;
+        margin-top: 0%;
+        margin-bottom: 10%;
+    }
+
+    h1 {
+        margin-top: 0%;
+        margin-bottom: 4%;
+        font-family: 'Raleway', sans-serif; /* Gunakan font Raleway */
+        font-weight: bolder;
+        font-size: 350%;
+    }
+
+    /* Custom CSS untuk tombol Top-Up */
+    .btn-topup {
+        background-color: darkslateblue;
+        border-color: darkslateblue;
+        font-size: 100%;
+    }
+
+    .btn-topup:hover,
+    .btn-topup:focus {
+        background-color: slateblue;
+        border-color: slateblue;
+    }
+
+
+    .news-section {
+        margin-top: 40px;
+        font-size: 120%;
+    }
+
+    .news-title {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+
+    .news-content {
+        margin-bottom: 30px;
+    }
+    
+</style>
+</head>
+<body>
+<!-- Navbar menggunakan Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #424769 ;">
+    <a class="navbar-brand" href="index.html" style="font-family: 'Raleway', sans-serif; color: antiquewhite;">ARSTORE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: aliceblue;">Item <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html" style="color: aliceblue;">Profile</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Carousel dengan 3 foto -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="mobile-legends-nana-wind-fairy-moonton-hd-wallpaper-preview.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="Free Fire Background.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img src="video-game-mobile-legends-bang-bang-hd-wallpaper-preview.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+    </div>
+</div>
+
+<!-- Konten halaman -->
+<div class="container">
+    <h1>Top-Up Game Murah</h1>
+    <div class="row">
+        <!-- Card pertama -->
+        <div class="col-lg-6">
+            <div class="card game-card text-center">
+                <img src="Free Fire pp.jpg" class="card-img-top" alt="Game 1">
+                <div class="card-body">
+                    <h5 class="card-title">Free Fire</h5>
+                    <a href="productff.html" class="btn btn-primary btn-topup">Top-Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card kedua -->
+        <div class="col-lg-6">
+            <div class="card game-card text-center">
+                <img src="Mobile Legends.jpg" class="card-img-top" alt="Game 2">
+                <div class="card-body">
+                    <h5 class="card-title">Mobile Legend</h5>
+                    <a href="productml.html" class="btn btn-primary btn-topup">Top-Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ARS STORE NEWS -->
+    <div class="news-section">
+        <h2 class="news-title">NEWS AND UPCOMING</h2>
+        <div class="news-content">
+            <p>ARSTORE Akan hadir dengan banyak game lainnya</p>
+        </div>
+    </div>
+
+    <div class="news-section">
+        <h2 class="news-title">ARSTORE</h2>
+        <div class="news-content">
+            <P>ARSTORE: Tempat topup terbaru di INDONESIA</P>
+            <li>Pengiriman Diamond cepat</li>
+            <li>Harga terjangkau</li>
+            <li>Tempat topup terpercaya</li>
+            <li>Topup tidak ribet</li>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS dan library jQuery (diperlukan untuk komponen Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

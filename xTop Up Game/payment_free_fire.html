@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=devgce-width, initial-scale=1.0">
+<title>Top-Up Diamonds</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<style>
+        /* Custom CSS untuk penyesuaian tampilan navbar */
+        .navbar {
+        background-color: #424769; /* Ubah warna latar belakang navbar sesuai keinginan */
+        }
+
+    .navbar-brand {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255); /* Ubah warna teks navbar sesuai keinginan */
+        font-weight: bold;
+        font-size: 300%;
+        margin-left: 2%;
+        }
+
+    .navbar-nav .nav-link {
+        color: #f0f8ff; /* Ubah warna teks link navbar sesuai keinginan */
+        font-family: 'Raleway', sans-serif;
+        font-weight: lighter;
+        font-size: 125%;
+        }
+
+    .navbar-nav .nav-link.active {
+        border-bottom: none; /* Hilangkan garis bawah pada link aktif */
+        }
+
+    .h1 {
+        font-family: 'Raleway', sans-serif;
+        font: bolder;
+        }
+
+    .pembayaran {
+        text-align: center;
+        margin-bottom: 4%;
+        margin-top: 2%;
+    }
+    .dana {
+        text-align: left;
+    }
+
+    .dana img{
+        height: 50px;
+    }
+</style>
+</head>
+<body>
+<!-- Navbar menggunakan Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #424769 ;">
+    <a class="navbar-brand" href="index.html" style="font-family: 'Raleway', sans-serif; color: #faebd7;">ARSTORE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: aliceblue;">Item <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html" style="color: aliceblue;">Profile</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Konten halaman -->
+<div class="container mt-4">
+    <h1>Konfirmasi Pembayaran</h1>
+    <p>Silakan lakukan pembayaran sejumlah:</p>
+    <div class="alert alert-success" role="alert" id="diamondPrice"></div>
+    <p>Informasi Pembelian:</p>
+    <div class="alert alert-info" role="alert" id="selectedDiamond"></div>
+    <!-- Tampilkan ID Zone di sebelah ID Player -->
+    <div class="alert alert-info" role="alert" id="playerIdDisplay"></div>
+    <!-- Form konfirmasi pembayaran -->
+    <p>Scan Pembayaran:</p>
+    <div class="dana"><img src="Logo DANA -  (Koleksilogo.com).svg" alt="dana"></div>
+    <div class="pembayaran"><img src="Pembayaran.jpg" alt="pembayaran"></div>
+    <a href="confirmation.html" class="btn btn-primary">Konfirmasi Pembayaran</a>
+</div>
+
+<!-- Bootstrap JS dan library jQuery (diperlukan untuk komponen Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Script untuk memuat informasi diamond dan ID player -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Ambil informasi diamond yang dipilih dan ID player dari penyimpanan lokal
+        const selectedDiamondCount = localStorage.getItem('selectedDiamondCount');
+        const selectedDiamondPrice = localStorage.getItem('selectedDiamondPrice');
+        const playerId = localStorage.getItem('playerId');
+
+        // Tampilkan informasi diamond yang dipilih, ID user, dan harga yang dipilih pada halaman pembayaran
+        document.getElementById('selectedDiamond').innerText = selectedDiamondCount;
+        document.getElementById('diamondPrice').innerText = selectedDiamondPrice;
+        document.getElementById('playerIdDisplay').innerText = 'Player ID: ' + playerId;
+    });
+</script>
+</body>
+</html>
