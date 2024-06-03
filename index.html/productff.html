@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top-Up Diamonds</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    /* Custom CSS untuk penyesuaian tampilan navbar */
+    .navbar {
+        background-color: #424769; /* Ubah warna latar belakang navbar sesuai keinginan */
+        }
+
+    .navbar-brand {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(255, 255, 255); /* Ubah warna teks navbar sesuai keinginan */
+        font-weight: bold;
+        font-size: 300%;
+        margin-left: 2%;
+        }
+
+    .navbar-nav .nav-link {
+        color: aliceblue; /* Ubah warna teks link navbar sesuai keinginan */
+        font-family: 'Raleway', sans-serif;
+        font-weight: lighter;
+        font-size: 125%;
+        }
+
+    .navbar-nav .nav-link.active {
+        border-bottom: none; /* Hilangkan garis bawah pada link aktif */
+        }
+
+    h1 {
+        margin-top: 3%;
+        margin-bottom: 2%;
+        font-family: 'Raleway', sans-serif; /* Gunakan font Raleway */
+        font-weight: 800;
+        font-size: 350%;
+        }
+
+    .form-text {
+        margin-top: 1%;
+        margin-bottom: 3%;
+    }
+
+    /* Custom CSS untuk tombol Top-Up */
+    .btn-primary {
+        background-color: slateblue;
+        border-color: rgb(255, 255, 255);
+        font-size: 150%;
+    }
+
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary.focus {
+        background-color: #424769;
+        border-color: rgb(255, 255, 255);
+    }
+
+    .btn-primary:hover {
+        background-color: darkslateblue;
+        border-color: darkslateblue;
+    }
+
+    .btn-primary.btn-success {
+        background-color: darkslateblue;
+        border-color: rgb(255, 255, 255);
+        box-shadow: none;
+    }
+</style>
+</head>
+<body>
+<!-- Navbar menggunakan Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #424769 ;">
+    <a class="navbar-brand" href="index.html" style="font-family: 'Raleway', sans-serif; color: antiquewhite;">ARSTORE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: aliceblue;">Item <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html" style="color: aliceblue;">Profile</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- Konten halaman -->
+<div class="container mt-4">
+    <h1>Top-Up Diamonds</h1>
+    <!-- Input ID Player -->
+    <div class="form-group">
+        <label for="playerId" style="font-size: 150;">Masukkan ID Player:</label>
+        <input type="text" class="form-control" id="playerId" placeholder="ID Player" onchange="validateInput">
+        <small id="playerIdHelp" class="form-text text-muted">Harap masukkan ID player (8-12) digit. <br>Ex : 123456789</small>
+    </div>
+
+    <!-- Tabel untuk Jumlah Diamonds dan Harga -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Jumlah Diamonds</th>
+                <th scope="col">Harga</th>
+                <th scope="col">  </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="logo-container">
+                <img src="diamond.svg" alt="logo"> 
+                <br>  
+                <span class="diamond-count">140 Diamonds</span>
+            </td>
+            <td>Rp20.000</td>
+            <td><button type="button" class="btn btn-primary" onclick="toggleItem(this)"> + </button></td>
+            </tr>
+            <tr>
+                <td class="logo-container">
+                <img src="diamond.svg" alt="logo"> 
+                <br>
+                <span class="diamond-count">210 Diamonds</span>
+            </td>
+            <td>Rp30.000</td>
+            <td><button type="button" class="btn btn-primary" onclick="toggleItem(this)"> + </button></td>
+            </tr>
+            <tr>
+                <td class="logo-container">
+                <img src="diamond.svg" alt="logo"> 
+                <br>
+                <span class="diamond-count">355 Diamonds</span>
+            </td>
+            <td>Rp45.000</td>
+            <td><button type="button" class="btn btn-primary" onclick="toggleItem(this)"> + </button></td>
+            </tr>
+            <tr>
+                <td class="logo-container">
+                <img src="diamond.svg" alt="logo"> 
+                <br>  
+                <span class="diamond-count">720 Diamonds</span>
+            </td>
+            <td>Rp90.000</td>
+            <td><button type="button" class="btn btn-primary" onclick="toggleItem(this)"> + </button></td>
+            </tr>
+            <tr>
+                <td class="logo-container">
+                <img src="diamond.svg" alt="logo"> 
+                <br>  
+                <span class="diamond-count">1450 Diamonds</span>
+            </td>
+            <td>Rp180.000</td>
+            <td><button type="button" class="btn btn-primary" onclick="toggleItem(this)"> + </button></td>
+            </tr>
+            <!-- Sisipkan baris-baris lainnya di sini -->
+        </tbody>
+    </table>
+    
+    <!-- Tombol pembayaran hanya menggunakan Dana -->
+    <div class="text-right">
+        <button type="button" class="btn btn-success" onclick="validateInput()">Bayar via Dana</button>
+    </div>
+</div>
+
+<!-- Bootstrap JS dan library jQuery (diperlukan untuk komponen Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function toggleItem(button) {
+        const buttons = document.querySelectorAll('.btn-primary');
+        buttons.forEach(btn => {
+            if (btn !== button) {
+                btn.classList.remove('btn-success');
+            }
+        });
+        // Toggle kelas 'btn-success' pada tombol yang diklik
+        button.classList.toggle('btn-success');
+
+        // Ambil informasi diamond yang dipilih
+        const selectedDiamondCount = button.parentElement.parentElement.querySelector('.diamond-count').innerText;
+        const selectedDiamondPrice = button.parentElement.previousElementSibling.innerText;
+
+        // Simpan informasi diamond yang dipilih ke dalam local storage
+        localStorage.setItem('selectedDiamondCount', selectedDiamondCount);
+        localStorage.setItem('selectedDiamondPrice', selectedDiamondPrice);
+    }
+
+    function validateInput() {
+        let playerId = document.getElementById('playerId').value.trim();
+
+        if (!/^\d{8,12}$/.test(playerId)) {
+            alert('Mohon masukkan ID player dengan angka dan panjang 8-12 digit!');
+            return false; // Batalkan aksi jika ID player tidak sesuai
+        }
+
+        // Simpan ID player ke dalam local storage
+        localStorage.setItem('playerId', playerId);
+
+        const selectedItems = document.querySelectorAll('.btn-success');
+        if (selectedItems.length === 0) {
+            alert('Harap pilih jumlah diamonds yang ingin dibeli!');
+            return false; // Batalkan aksi jika tidak ada item yang dipilih
+        }
+        
+        // Lanjutkan ke halaman pembayaran jika input valid
+        window.location.href = 'payment_free_fire.html'; // Ganti dengan URL halaman pembayaran
+    }
+</script>
+</body>
+</html>
